@@ -1,0 +1,284 @@
+:root {
+    --primary: #8B1E3F;
+    --primary-hover: #721832;
+    --dark: #1E293B;
+    --text: #475569;
+    --border: #E2E8F0;
+    --bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.auth-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.auth-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    background: rgb(white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form-side {
+    padding: 45px 55px;
+}
+
+.tagline {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+h1 {
+    color: var(--dark);
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(139, 30, 63, 0.1);
+}
+
+.password-shell {
+    position: relative;
+}
+
+.password-shell input {
+    padding-right: 78px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    min-width: 60px;
+    padding: 5px 6px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--primary);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.password-toggle:hover,
+.password-toggle:focus-visible {
+    background: #f8e9ee;
+    outline: none;
+}
+
+.btn-main {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.2s;
+}
+
+.btn-main:hover {
+    background: var(--primary-hover);
+}
+
+.sep {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.sep::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    left: 0;
+}
+
+.sep span {
+    background: white;
+    padding: 0 10px;
+    position: relative;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.btn-google {
+    width: 100%;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 11px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-google img {
+    width: 20px;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.footer-text a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.access-note {
+    margin: -3px 0 17px;
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.auth-visual-side {
+    background: #F8E9EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.visual-box {
+    text-align: center;
+    max-width: 300px;
+}
+
+.school-logo-frame {
+    width: 169px;
+    height: 169px;
+    margin: 0 auto 18px;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 5px solid #F4D900;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(30, 41, 59, .16);
+}
+
+.school-logo-frame img {
+    width: 143px !important;
+    height: 143px !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    display: block;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.school-name {
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.visual-box h2 {
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.visual-box p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.input-error {
+    border: 2px solid #ef4444 !important;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+    transition: all 0.3s ease;
+}
+
+.error-msg {
+    color: #ef4444;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    line-height: 1.45;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-visual-side {
+        min-height: 280px;
+        padding: 30px 25px;
+    }
+
+    .auth-form-side {
+        padding: 35px 25px;
+    }
+}

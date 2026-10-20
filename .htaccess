@@ -1,0 +1,7 @@
+Options -Indexes
+RewriteEngine On
+
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^(?:app|config|controllers|models|views)(?:/|$) - [F,L]
+RewriteRule ^public/ - [L]
+RewriteRule ^(.*)$ public/$1 [L]
